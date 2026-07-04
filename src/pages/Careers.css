@@ -1,0 +1,133 @@
+.perks-section {
+  background: var(--off-white);
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.perk-card {
+  padding: 32px 24px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 107, 157, 0.1);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.perk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-pink);
+}
+
+.perk-card__icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 16px;
+  color: var(--pink-hot);
+}
+
+.perk-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.perk-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.openings-section {
+  background: var(--white);
+}
+
+.openings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.opening-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 107, 157, 0.1);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.opening-card:hover {
+  border-color: rgba(255, 107, 157, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.opening-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.opening-card__type {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--pink-hot);
+  margin-bottom: 8px;
+}
+
+.opening-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.opening-card__btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.careers-cta {
+  background: var(--off-white);
+}
+
+.careers-cta-box {
+  text-align: center;
+  padding: 48px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 107, 157, 0.12);
+}
+
+.careers-cta-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.careers-cta-box p {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+@media (max-width: 900px) {
+  .perks-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .opening-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 540px) {
+  .perks-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,171 @@
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid rgba(255, 107, 157, 0.12);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow var(--transition), border-color var(--transition);
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) rotate(-0.5deg);
+  box-shadow: var(--shadow-pink);
+  border-color: rgba(255, 107, 157, 0.35);
+}
+
+.service-card--anim-1:hover {
+  transform: translateY(-10px) rotate(0.5deg);
+}
+
+.service-card--anim-2:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.service-card__glow {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 15%, transparent) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.service-card:hover .service-card__glow {
+  opacity: 1;
+}
+
+.service-card__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.4) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.service-card:hover .service-card__shine {
+  transform: translateX(100%);
+}
+
+.service-card__icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: color-mix(in srgb, var(--accent) 12%, var(--white));
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.service-card__icon .anim-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.service-card:hover .service-card__icon {
+  transform: scale(1.12);
+  background: color-mix(in srgb, var(--accent) 22%, var(--white));
+}
+
+.service-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  transition: color var(--transition);
+}
+
+.service-card:hover .service-card__title {
+  color: var(--pink-hot);
+}
+
+.service-card__tagline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.service-card__features {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.service-card__features li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 6px 0;
+  padding-left: 16px;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition-delay: calc(var(--fi) * 0.05s);
+}
+
+.service-card:hover .service-card__features li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-card__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background: var(--pink-hot);
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: transform 0.3s ease;
+  transition-delay: calc(var(--fi) * 0.05s + 0.1s);
+}
+
+.service-card:hover .service-card__features li::before {
+  transform: translateY(-50%) scale(1);
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pink-hot);
+}
+
+.service-card__arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-card__arrow {
+  transform: translateX(6px);
+}
+
+.service-card__index {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+  color: rgba(255, 107, 157, 0.08);
+  line-height: 1;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.service-card:hover .service-card__index {
+  color: rgba(255, 107, 157, 0.18);
+  transform: scale(1.1);
+}

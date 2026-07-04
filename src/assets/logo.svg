@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
+  <defs>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b9d"/>
+      <stop offset="100%" stop-color="#ffb6c1"/>
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#2a2a35"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="4" width="40" height="40" rx="12" fill="url(#pinkGrad)"/>
+  <path d="M22 14 L28 24 L22 34 L16 24 Z" fill="#fff" opacity="0.95"/>
+  <circle cx="22" cy="24" r="3" fill="#ff6b9d"/>
+  <text x="54" y="32" font-family="Syne, Outfit, sans-serif" font-size="22" font-weight="800" fill="url(#darkGrad)">Indravex</text>
+  <text x="158" y="32" font-family="Syne, Outfit, sans-serif" font-size="22" font-weight="800" fill="#ff6b9d">Tech</text>
+</svg>
